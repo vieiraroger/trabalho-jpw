@@ -4,18 +4,20 @@
 
 
 1. `npm install`
-2. `npm start`
+2. Colocar seu mongo db no server.js (pessoa, livro, serie)
+3. `npm start`
+
 
 ## API Livros
 
 Modelo:
 ```
 Titulo: String
-Autor: String
+Autor: String (Filtravel)
 Valor: Integer
 ```
 
-### GET []
+### GET /livro
 ```
 [
     {
@@ -29,7 +31,7 @@ Valor: Integer
 ]
 ```
 
-### GET /:id
+### GET /livro/:id
 ```
 {
     "_id": "609fe1281ea9ac2a84e49012",
@@ -40,7 +42,7 @@ Valor: Integer
 }
 ```
 
-### POST
+### POST /livro
 Body:
 ```
 {
@@ -61,7 +63,7 @@ Output:
 }
 ```
 
-### PUT /:id
+### PUT /livro/:id
 Body:
 ```
 {
@@ -82,7 +84,7 @@ Output:
 }
 ```
 
-### Delete
+### DELETE /livro/:id
 ```
 {
     "Mensagem": "Livro deletado com sucesso"
@@ -94,11 +96,11 @@ Output:
 
 Modelo:
 ```
-Nome: String
+Nome: String (Filtravel)
 Idade: Integer
 ```
 
-### GET []
+### GET /pessoa
 ```
 [
     {
@@ -111,7 +113,7 @@ Idade: Integer
 ]
 ```
 
-### GET /:id
+### GET /pessoa/:id
 ```
 {
     "_id": "609fe4eeca4fea2af4c0c81a",
@@ -121,7 +123,7 @@ Idade: Integer
 }
 ```
 
-### POST
+### POST /pessoa
 Body:
 ```
 {
@@ -140,7 +142,7 @@ Output:
 }
 ```
 
-### PUT /:id
+### PUT /pessoa/:id
 Body:
 ```
 {
@@ -159,7 +161,7 @@ Output:
 }
 ```
 
-### Delete
+### DELETE /pessoa/:id
 ```
 {
     "Mensagem": "Pessoa deletada com sucesso"
@@ -171,11 +173,10 @@ Output:
 Modelo:
 ```
 Titulo: String
-Autor: String
-Valor: Integer
+Strimming: String (Filtravel)
 ```
 
-### GET []
+### GET /series
 ```
 [
     {
@@ -188,7 +189,7 @@ Valor: Integer
 ]
 ```
 
-### GET /:id
+### GET /series/:id
 ```
 {
     "_id": "609ff7d0ebc9d30c78763c1d",
@@ -198,7 +199,7 @@ Valor: Integer
 }
 ```
 
-### POST
+### POST /series
 Body:
 ```
 {
@@ -217,7 +218,7 @@ Output:
 }
 ```
 
-### PUT /:id
+### PUT /series/:id
 Body:
 ```
 {
@@ -236,7 +237,7 @@ Output:
 }
 ```
 
-### Delete
+### DELETE /series/:id
 ```
 {
     "Mensagem": "Serie deletada com sucesso"
