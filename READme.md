@@ -88,3 +88,81 @@ Output:
     "Mensagem": "Livro deletado com sucesso"
 }
 ```
+
+
+## API Pessoas
+
+Modelo:
+```
+Titulo: String
+Autor: String
+Valor: Integer
+```
+
+### GET []
+```
+[
+    {
+        "_id": "609fe4eeca4fea2af4c0c81a",
+        "nome": "Roger",
+        "idade": 21,
+        "__v": 0
+    },
+    ...
+]
+```
+
+### GET /:id
+```
+{
+    "_id": "609fe4eeca4fea2af4c0c81a",
+    "nome": "Roger",
+    "idade": 21,
+    "__v": 0
+}
+```
+
+### POST
+Body:
+```
+{
+    "nome": "Roger",
+    "idade": 21
+}
+```
+
+Output:
+```
+{
+    "_id": "609fe4eeca4fea2af4c0c81a",
+    "nome": "Roger",
+    "idade": 21,
+    "__v": 0
+}
+```
+
+### PUT /:id
+Body:
+```
+{
+    "nome": "Roger",
+    "idade": 21
+}
+```
+
+Output:
+```
+{
+    "_id": "609fe4eeca4fea2af4c0c81a",
+    "nome": "Roger",
+    "idade": 21,
+    "__v": 0
+}
+```
+
+### Delete
+```
+{
+    "Mensagem": "Pessoa deletada com sucesso"
+}
+```
