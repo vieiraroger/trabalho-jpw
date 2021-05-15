@@ -7,7 +7,7 @@ livro = require('./api/models/livroModel');
 bodyParser = require('body-parser');
   
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb+srv://admin:dr7Y9fBhhv6HD97@cluster0.xo4ue.mongodb.net/jpw?retryWrites=true&w=majority');
+mongoose.connect('SEU CODIGO MONGO DB AQUI');
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
