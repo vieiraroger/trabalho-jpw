@@ -94,9 +94,8 @@ Output:
 
 Modelo:
 ```
-Titulo: String
-Autor: String
-Valor: Integer
+Nome: String
+Idade: Integer
 ```
 
 ### GET []
@@ -164,5 +163,82 @@ Output:
 ```
 {
     "Mensagem": "Pessoa deletada com sucesso"
+}
+```
+
+## API Series
+
+Modelo:
+```
+Titulo: String
+Autor: String
+Valor: Integer
+```
+
+### GET []
+```
+[
+    {
+        "_id": "609ff7d0ebc9d30c78763c1d",
+        "titulo": "As aventuras de Roger",
+        "streamming": "Prime Video",
+        "__v": 0
+    },
+    ...
+]
+```
+
+### GET /:id
+```
+{
+    "_id": "609ff7d0ebc9d30c78763c1d",
+    "titulo": "As aventuras de Roger",
+    "streamming": "Prime Video",
+    "__v": 0
+}
+```
+
+### POST
+Body:
+```
+{
+    "titulo": "As aventuras de Roger",
+    "streamming": "Netflix"
+}
+```
+
+Output:
+```
+{
+    "_id": "609ff7d0ebc9d30c78763c1d",
+    "titulo": "As aventuras de Roger",
+    "streamming": "Netflix",
+    "__v": 0
+}
+```
+
+### PUT /:id
+Body:
+```
+{
+    "titulo": "As aventuras de Roger",
+    "streamming": "Prime Video"
+}
+```
+
+Output:
+```
+{
+    "_id": "609ff7d0ebc9d30c78763c1d",
+    "titulo": "As aventuras de Roger",
+    "streamming": "Prime Video",
+    "__v": 0
+}
+```
+
+### Delete
+```
+{
+    "Mensagem": "Serie deletada com sucesso"
 }
 ```
