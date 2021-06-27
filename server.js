@@ -1,7 +1,10 @@
 var express = require('express');
+var cors = require('cors')
+
 
 app = express();
-port = process.env.PORT || 3000;
+app.use(cors())
+port = process.env.PORT || 8080;
 mongoose = require('mongoose')
 livro = require('./api/models/livroModel');
 pessoa = require('./api/models/pessoaModel');
